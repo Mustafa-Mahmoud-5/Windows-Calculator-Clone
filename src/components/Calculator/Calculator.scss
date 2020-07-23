@@ -1,0 +1,107 @@
+
+.calcWraper {
+  display:flex;
+  justify-content: center;
+  margin-top: 100px;
+
+  #Calculator {
+    background-color: #2E2E2E;
+    width: 60%;
+    box-shadow: 2px 3px 1px black;
+
+    #CalcBoard {
+      color: white;
+      font-size: 30px;
+      text-align: right;
+      padding: 20px;
+      word-wrap: break-word;
+
+      .board {
+        font-size: 20px;
+        color: rgb(214, 190, 190);
+      }
+    }
+    
+    .btns {   
+      display: flex;
+      width: 100% !important;
+      .red {
+        background-color: red;
+
+        &:hover{ 
+          background-color: red;
+        }
+      } 
+      .yellow {
+
+        background-color: rgb(143, 143, 15);
+        &:hover{ 
+        background-color: rgb(143, 143, 15);
+        }
+      }
+
+      .blue {
+        background-color: blue;
+        &:hover {
+          background-color: blue;
+        }
+      }
+      .digits {
+        width: 85%;
+        
+        .Button {
+          width: 20% !important;
+        }
+      }
+      
+      .controllers {
+        width: 20%;
+
+        .Button {
+          width: 25% !important;
+        }
+      }
+    }
+      .Button {
+      float: left;
+      margin: 0 !important;
+      border: 1px solid #2E2E2E;
+      background-color: black;
+      color: white;
+      font-size: 20px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: .1s;
+      &:hover {
+        background-color: #a0a0a0;
+      }
+      &:active {
+        transform: scale(.9, .9);
+        background-color: #2E2E2E;
+      }
+    }
+  }
+}
+
+
+
+@media only screen and (max-width: 700px) {
+  #Calculator {
+    width: 100% !important;
+
+    .btns {
+      .digits {
+        width: 70% !important;
+      }
+        .controllers {
+          width: 30% !important;
+        }
+
+    }
+
+
+  }
+}
